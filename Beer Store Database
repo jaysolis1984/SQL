@@ -1,0 +1,30 @@
+--Create a beer store database
+
+CREATE TABLE beer_store (id INTEGER PRIMARY KEY, brewery TEXT, name TEXT, stock INTEGER, price INTEGER);
+
+INSERT INTO beer_store VALUES 
+(1, 'Saint Arnolds', 'Art Car', 8, 7),
+(2, 'Holler', 'Dolla Dolla Pils', 13, 6),
+(3, '8th Wonder', 'Haterade', 5, 5),
+(4, 'Platypus', 'IPA', 7, 5),
+(5, 'Eureka Heights', 'Mini Boss', 12, 5),
+(6, 'Urban South', 'Smoothie IPA', 8, 7),
+(7, 'City Acre', 'Hitchcock', 9, 6),
+(8, 'Astral', 'Double IPA', 5, 6),
+(9, '4J', 'IPA', 9,5),
+(10, 'Under the Radar', 'Wheat Ale', 1, 5),
+(11, 'Spindletap', '5% Tint', 8, 8),
+(12, 'True Anomaly', 'Event Horizon', 4, 7),
+(13, 'Baileson', 'Cream Ale', 8, 6),
+(14, 'Southern Yankee', 'Que Pablo?', 13, 6),
+(15, 'Little Machine', 'Sir Veza', 50, 6)
+;
+
+--Display the database ordered by price.
+SELECT * FROM beer_store ORDER BY price;
+
+--display total stock
+SELECT sum(stock) FROM beer_store;
+
+--display stock less than 10
+SELECT sum(stock) from beer_store WHERE stock < 10;
